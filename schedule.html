@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conference Schedule</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  h1 {
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    color: #666;
+    font-size: 18px;
+  }
+
+  /* Day Section Formatting */
+  .day-block { margin-bottom: 50px; }
+  
+  .day-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0056b3;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  /* Creates a clean line next to the day title */
+  .day-title::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: #eaeaea;
+    margin-left: 20px;
+  }
+
+  /* Event Item using Flexbox */
+  .event {
+    display: flex;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #eaeaea;
+    transition: border-color 0.2s ease;
+  }
+  .event:hover {
+    border-left-color: #0056b3;
+  }
+  
+  .time-column {
+    min-width: 140px;
+    font-weight: 600;
+    color: #555;
+    padding-top: 2px; /* Align with h3 line height */
+  }
+  
+  .details-column h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #111;
+  }
+  .details-column p {
+    margin: 0 0 5px 0;
+    color: #666;
+    font-size: 15px;
+  }
+  .speaker {
+    display: inline-block;
+    background: #f0f4f8;
+    color: #0056b3;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>TechCon 2026</h1>
+  <div class="subtitle">Main Stage Schedule</div>
+</header>
+
+<main>
+  <section class="day-block">
+    <div class="day-title">Friday, October 10</div>
+    
+    <div class="event">
+      <div class="time-column">09:00 AM - 10:00 AM</div>
+      <div class="details-column">
+        <h3>Registration & Morning Coffee</h3>
+        <p>Pick up your badges and grab a coffee in the main lobby.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="time-column">10:00 AM - 11:30 AM</div>
+      <div class="details-column">
+        <h3>Opening Keynote: The Future of Web Dev</h3>
+        <p>A look into emerging standards and performance metrics for the next decade.</p>
+        <span class="speaker">Dr. Sarah Jenkins</span>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="time-column">11:45 AM - 12:45 PM</div>
+      <div class="details-column">
+        <h3>Mastering CSS Grid Architectures</h3>
+        <p>Advanced techniques for building complex layouts without frameworks.</p>
+        <span class="speaker">Marcus Rivera</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="day-block">
+    <div class="day-title">Saturday, October 11</div>
+    
+    <div class="event">
+      <div class="time-column">09:30 AM - 10:30 AM</div>
+      <div class="details-column">
+        <h3>Accessibility Beyond the Basics</h3>
+        <p>Implementing ARIA standards for dynamic, single-page applications.</p>
+        <span class="speaker">Priya Patel</span>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="time-column">11:00 AM - 12:30 PM</div>
+      <div class="details-column">
+        <h3>Panel: State of JavaScript Frameworks</h3>
+        <p>An open debate on the pros and cons of current UI rendering methodologies.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
