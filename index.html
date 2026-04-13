@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design & Development | Resources Hub</title>
+<style>
+  :root {
+    --bg-dark: #0a0a0c;
+    --panel-bg: #16161a;
+    --neon-blue: #00f3ff;
+    --neon-red: #ff003c;
+    --text-main: #e0e0e0;
+    --text-muted: #8892b0;
+  }
 
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 800px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  /* Grid Layout for the Hub */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  /* Skeuomorphic / Retro-Tech Cards */
+  .card {
+    background-color: var(--panel-bg);
+    border: 2px solid #2a2a35;
+    border-radius: 8px;
+    padding: 25px;
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.05),
+      0 5px 15px rgba(0,0,0,0.5);
+  }
+
+  .card:hover {
+    border-color: var(--neon-blue);
+    transform: translateY(-5px);
+    box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.1),
+      0 8px 25px rgba(0, 243, 255, 0.15);
+  }
+
+  /* Red accent for the middle card to break up the color */
+  .card:nth-child(2):hover {
+    border-color: var(--neon-red);
+    box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.1),
+      0 8px 25px rgba(255, 0, 60, 0.15);
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-title::after {
+    content: ">>";
+    font-size: 16px;
+    color: #444;
+    transition: color 0.3s;
+  }
+
+  .card:hover .card-title::after { color: var(--neon-blue); }
+  .card:nth-child(2):hover .card-title::after { color: var(--neon-red); }
+
+  .card-desc {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+  }
+
+  .tech-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 4px 8px;
+    background: #0a0a0c;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+
+  /* System Status Footer */
+  footer {
+    margin-top: 60px;
+    font-size: 12px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--neon-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--neon-blue);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Resources Hub</h1>
+  <div class="subtitle">Web Design & Development // Local Directory</div>
+</header>
+
+<main class="resource-grid">
+  
+  <a href="stats.html" class="card">
+    <div class="card-title">Analytics Dashboard</div>
+    <p class="card-desc">A data-heavy layout focusing on scannability. Explores CSS Grid for stat cards and styled HTML tables for dense data representation.</p>
+    <div class="tech-tags">
+      <span class="tag">HTML5</span>
+      <span class="tag">CSS Grid</span>
+      <span class="tag">Tables</span>
+    </div>
+  </a>
+
+  <a href="streamer.html" class="card">
+    <div class="card-title">Streamer Profile</div>
+    <p class="card-desc">A dark-mode, media-focused layout. Demonstrates fixed sidebars, aspect-ratio containers for video, and responsive thumbnail grids.</p>
+    <div class="tech-tags">
+      <span class="tag">Dark Mode</span>
+      <span class="tag">Flexbox</span>
+      <span class="tag">Media Layout</span>
+    </div>
+  </a>
+
+  <a href="schedule.html" class="card">
+    <div class="card-title">Event Schedule</div>
+    <p class="card-desc">A clean, minimalist layout prioritizing typography and whitespace. Shows how to structure chronological data without heavy borders.</p>
+    <div class="tech-tags">
+      <span class="tag">Typography</span>
+      <span class="tag">Spacing</span>
+      <span class="tag">Clean UI</span>
+    </div>
+  </a>
+
+</main>
+
+<footer>
+  <div class="status-dot"></div>
+  SYSTEM ONLINE // NO EXTERNAL DEPENDENCIES
+</footer>
+
+</body>
+</html>
