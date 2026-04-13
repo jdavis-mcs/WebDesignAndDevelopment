@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Face Space | John T.</title>
+<style>
+  body { font-family: Arial, sans-serif; background-color: #f0f2f5; margin: 0; color: #1c1e21; }
+  .navbar { background-color: #1877f2; color: white; padding: 15px 20px; font-size: 24px; font-weight: bold; }
+  .container { max-width: 800px; margin: 20px auto; display: grid; grid-template-columns: 300px 1fr; gap: 20px; }
+  .sidebar { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); height: fit-content; }
+  .sidebar h3 { margin-top: 0; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+  .feed { display: flex; flex-direction: column; gap: 20px; }
+  .post { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+  .avatar { width: 40px; height: 40px; background: #ddd; border-radius: 50%; }
+  .post-author { font-weight: bold; }
+  .post-date { color: #65676b; font-size: 12px; }
+  .image-placeholder { background: #e4e6eb; border: 2px dashed #bcc0c4; padding: 40px 20px; text-align: center; border-radius: 8px; margin-top: 15px; font-family: monospace; color: #444; }
+</style>
+</head>
+<body>
+
+<div class="navbar">Face Space</div>
+
+<div class="container">
+  <aside class="sidebar">
+    <h3>Intro</h3>
+    <p>🎓 Student at <strong>Springfield High School</strong></p>
+    <p>📍 Lives in <strong>Oakville, IL</strong></p>
+    <p>🎮 Hobbies: Gaming, biking, and hanging out.</p>
+  </aside>
+
+  <main class="feed">
+    <div class="post">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div>
+          <div class="post-author">John T.</div>
+          <div class="post-date">Yesterday at 4:30 PM</div>
+        </div>
+      </div>
+      <div class="post-content">
+        Look what finally came in the mail! I've been waiting weeks for these limited edition sneakers. So hyped! 👟🔥
+        <div class="image-placeholder">
+          [IMAGE: A photo of a cardboard box sitting on a kitchen counter. The shoes are visible inside. On the side of the box, a shipping label is clearly visible. It reads: <br><br>
+          <strong>SHIP TO:</strong><br>
+          John Thompson<br>
+          742 Evergreen Terrace<br>
+          Oakville, IL 62609]
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div>
+          <div class="post-author">John T.</div>
+          <div class="post-date">October 12 at 8:15 AM</div>
+        </div>
+      </div>
+      <div class="post-content">
+        Can't believe summer is over. First day of Junior year let's goooo! 
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
